@@ -1,1 +1,1 @@
-web: ruby ./sentiment_api.rb -p $PORT
+web: rackup -p $PORT
