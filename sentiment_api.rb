@@ -2,7 +2,7 @@
 require 'rubygems'
 require 'json'
 require 'sinatra'
-require "#{File.dirname(__FILE__)}/analyzer"
+require_relative 'analyzer'
 
 
 class SentimentApi < Sinatra::Base
