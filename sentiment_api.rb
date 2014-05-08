@@ -5,7 +5,6 @@ require 'sinatra'
 require "#{File.dirname(__FILE__)}/analyzer"
 
 
-
 class SentimentApi < Sinatra::Base
   disable :logging
   disable :raise_errors
@@ -14,8 +13,6 @@ class SentimentApi < Sinatra::Base
   configure :production do
     disable :dump_errors
   end
-  
-  set :server, 'thin'
   
   @@the_logic = Analyzer.new
 
@@ -57,6 +54,3 @@ class SentimentApi < Sinatra::Base
   end
    
 end
-
-
-SentimentApi.run! :port => ARGV[0]
